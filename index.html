@@ -9,11 +9,17 @@
 			<input type="text" class="fibonacciField" id="secondNumber" placeholder="2nd Number">
 			<input type="text" class="fibonacciField" id="count" placeholder="Additional Quantity">
 			<br/>
-			<span id="fibonacciString"></span>
-			for <a href="https://github.com/jeremyabulencia/venture/blob/gh-pages/index.html">source code</a>
+			<span id="fibonacciString" style="background-color:#F0F0F0"></span> <br/>
+			for <a class="source" data-href="https://github.com/jeremyabulencia/venture/blob/gh-pages/index.html">source code</a>
 		</div>
 	</body>
 </html>
+<style>
+	a{
+		color:green;
+		cursor:pointer;
+	}
+</style>
 <script src="jquery-1.10.2.js"></script>
 <script>
 	$('.fibonacciField').blur(function(){
@@ -40,5 +46,9 @@
 		}else{
 
 		}
+	})
+
+	$('.source').on('click',function(){
+		window.open($(this).data('href'))
 	})
 </script>
